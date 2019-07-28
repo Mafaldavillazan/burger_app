@@ -4,6 +4,10 @@
 
 //Requiring mysql
 var mysql = require("mysql");
+//Requiring process for security
+if (process.env.NODE_ENV !== "production") {
+    require("dotenv").config();
+  }
 
 //Connection credentials, with security field
 var connection = mysql.createConnection({
@@ -24,4 +28,4 @@ connection.connect(function (err) {
 });
 
 // Export connection
-module.exports = connection;
+//module.exports = connection;
