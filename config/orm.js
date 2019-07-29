@@ -25,12 +25,12 @@ var orm = {
 
 
 
-    updateOne: function(tableBurgers, cols, boleanchange, cb) {
+    updateOne: function(tableBurgers, boleanchange, id, cb) {
       var queryString =
-        "UPDATE ?? SET ? WHERE id = ";
+        "UPDATE ?? SET ? WHERE ?;";
       connection.query(
         queryString,
-        [tableBurgers, cols, boleanchange],
+        [tableBurgers, boleanchange, id],
         function(err, result) {
           if (err) throw err;
           console.log(result);

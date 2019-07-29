@@ -15,8 +15,8 @@ var burger = {
       });
     },
 
-    updateOne: function(cols,  boleanchange, cb) {
-      orm.updateOne("burgers", cols, boleanchange, function(res) {
+    updateOne: function(booleanchange,  id, cb) {
+      orm.updateOne("burgers", booleanchange, id, function(res) {
         cb(res);
       });
     },
