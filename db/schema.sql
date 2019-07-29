@@ -10,7 +10,6 @@ CREATE TABLE burgers
 (
 	id INT NOT NULL AUTO_INCREMENT,
 	burger_name VARCHAR(30) NOT NULL,
-    ----- it hasn't been eaten yet --------
 	devoured BOOLEAN DEFAULT false,
 	PRIMARY KEY (id)
 );
