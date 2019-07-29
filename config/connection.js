@@ -28,4 +28,4 @@ connection.connect(function (err) {
 });
 
 // Export connection
-//module.exports = connection;
+module.exports = connection;

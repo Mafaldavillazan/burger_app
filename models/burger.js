@@ -3,20 +3,19 @@ var orm = require("../config/orm.js");
 
 //Linking orm with our app
 var burger = {
-
     selectAll: function(cb) {
-      orm.all("burgers", function(res) {
+      orm.selectAll("burgers", function(res) {
         cb(res);
       });
     },
 
     insertOne: function(col, val, cb) {
-      orm.create("burgers", col, val, function(res) {
+      orm.insertOne("burgers", col, val, function(res) {
         cb(res);
       });
     },
     updateOne: function(col, val, cb) {
-      orm.update("burgers", col, val, function(res) {
+      orm.updateOne("burgers", col, val, function(res) {
         cb(res);
       });
     },

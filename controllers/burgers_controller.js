@@ -3,7 +3,7 @@ var express = require("express");
 var router = express.Router();
 
 // Require the burger model
-var burger = require("../models/burger.js");
+var burger = require("../models/burger");
 
 //---------------------------------
 //           ROUTERS
@@ -22,7 +22,7 @@ router.get("/", function (req, res) {
 
 router.post("/api/burgers", function (req, res) {
     burger.insertOne([
-        "burger_name", "devoured"
+        "name", "devoured"
     ], [
             req.body.burger, req.body.devoured
         ], function (result) {
